@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Abhijeet Singh - Web Developer Portfolio showcasing projects built with HTML, CSS, JavaScript and React.">
+
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">My Portfolio</div>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="Images/Abhijeet_Singh_CV.pdf" download class="download-btn">Download CV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-left">
+                <h1>Hi, I'm Abhijeet Singh</h1>
+                <p>A passionate Web Developer</p>
+            </div>
+            <div class="hero-right">
+                <img src="Images/Abhijeet.jpg" alt="Abhijeet Singh Profile Picture" class="profile-img">
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I am a passionate Web Developer with a strong foundation in modern web technologies.
+                I specialize in building responsive and interactive user interfaces using HTML, CSS, and JavaScript.
+
+                I have experience working with React.js to build single-page applications (SPAs),
+                and I am comfortable with components, hooks, state management, and routing.
+
+                I enjoy turning ideas into real-world web applications that are clean, efficient, and user-friendly.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-container">
+                <div class="project-card">
+                    <img src="Images/to-do list.jpg" alt="Project 1 Image">
+                    <h3>Future University Digital Librery</h3>
+                    <p>This Website is a lightweight and efficient to-do list created using vanilla JavaScript.
+                        It helps you keep track of your tasks and boost your productivity.
+                        You can easily add, edit, and delete tasks to manage your schedule effectively.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+
+                <div class="project-card">
+                    <img src="Images/Mini E commerce.jpg" alt="Project 2 Image">
+                    <h3>Mini e-commerce Website</h3>
+                    <p>This website is a demonstration of a basic e-commerce store, built entirely with HTML, CSS, and
+                        JavaScript.
+                        It features a responsive product layout and a functional shopping cart, showing how these core
+                        web technologies can be used together
+                        to create a dynamic shopping experience.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300" alt="Project 3 Image">
+                    <h3>TO-DO List</h3>
+                    <p>This Website is a lightweight and efficient to-do list created using vanilla JavaScript.
+                        It helps you keep track of your tasks and boost your productivity.
+                        You can easily add, edit, and delete tasks to manage your schedule effectively.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form class="contact-form" action="https://formspree.io/f/xojnjgyk" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> My Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

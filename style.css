@@ -1,0 +1,319 @@
+/* Color Palette */
+:root {
+    --bg-color: #000000;         /* Black */
+    --primary-color: #4CAF50;    /* Green */
+    --secondary-color: #f2f2f2;  /* Light Grey */
+    --accent-color: #FF5722;     /* Orange */
+    --text-color: #ffffff;       /* White */
+}
+
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+     background: linear-gradient(135deg, #000000, #0f2027);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(76, 175, 80, 0.3);
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    position: relative; /* ::after element ko position karne ke liye */
+    transition: color 0.3s ease;
+}
+
+/* Yahan naya code add karein */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Link se neeche position set karein */
+    left: 0;
+    width: 0; /* Shuruat mein width zero rahegi */
+    height: 2px;
+    background-color: var(--primary-color); /* Green color */
+    transition: width 0.3s ease; /* Animation ka duration aur effect */
+}
+
+/* Hover state ke liye */
+nav ul li a:hover::after {
+    width: 100%; /* Hover karne par width 100% ho jayegi */
+}
+
+/* Specific styles for Download CV button in the navbar */
+.download-btn {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
+
+
+.download-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    transition: 0.2s ease;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+}
+
+section {
+    padding: 6rem 0;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Hero Section */
+#hero {
+    height: 80vh;
+    padding: 2rem;
+    display: flex; /* Flexbox ka istemal */
+    flex-direction: row; /* Content left to right aayega */
+    justify-content: space-around; /* Dono sides mein space */
+    align-items: center; /* Vertically center align karein */
+    background-color: var(--bg-color); /* Background black rakhein */
+}
+
+.hero-left {
+    text-align: left;
+    max-width: 50%; /* Left side ko 50% width de */
+}
+.hero-left h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-left p {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.hero-right {
+    text-align: right;
+    max-width: 40%; /* Right side ko 40% width de */
+}
+
+.profile-img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* Responsive design ke liye */
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column; /* Mobile devices par vertically stack ho jayein */
+        text-align: center;
+    }
+
+    .hero-left, .hero-right {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Project Cards Section */
+#projects {
+    background-color: #1a1a1a;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 1.5rem;
+    max-width: 350px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.6); /* Green shadow */
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(76, 175, 80, 0.4);
+}
+
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #388e3c;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(76, 175, 80, 0.4);
+}
+
+
+/* Contact Form Styles */
+#contact {
+    background-color: #1a1a1a;
+    padding: 4rem 2rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #2a2a2a;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.2);
+
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #444;
+    background-color: #333;
+    color: var(--text-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.contact-form .btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 1rem;
+    color: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Scroll Reveal Animation */
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Active Navbar Link */
+
+nav ul li a.active {
+    color: var(--primary-color);
+}
